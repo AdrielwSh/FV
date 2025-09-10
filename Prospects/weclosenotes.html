@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Close Notes - The Premier Buyer of Real Estate Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #ffffff;
+            color: #333333; 
+        }
+        .font-header {
+            font-family: 'PT Serif', serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(18, 24, 38, 0.85), rgba(18, 24, 38, 0.85)), url('https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+        }
+        .brand-green { color: #75b843; }
+        .bg-brand-green { background-color: #75b843; }
+        .border-brand-green { border-color: #75b843; }
+        .ring-brand-green:focus { ring-color: #75b843; }
+        .hover-bg-brand-green-dark:hover { background-color: #5a9134; }
+        .hover-text-brand-green:hover { color: #75b843; }
+        
+        .bg-brand-dark { background-color: #232323; }
+
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .step-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .step-card:hover {
+            transform: scale(1.05);
+            border-color: #75b843;
+        }
+        .testimonial-card {
+            background-color: #F7FAFC; /* Light Gray */
+        }
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-brand-dark text-white fixed w-full top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4 px-6">
+            <div class="text-2xl font-header font-bold tracking-wide">
+                WeCloseNotes<span class="brand-green">.com</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#process" class="hover-text-brand-green transition duration-300">Our Process</a>
+                <a href="#why-us" class="hover-text-brand-green transition duration-300">Why Us</a>
+                <a href="#testimonials" class="hover-text-brand-green transition duration-300">Testimonials</a>
+                <a href="#get-offer" class="bg-brand-green text-white font-bold px-5 py-2 rounded-md hover-bg-brand-green-dark transition duration-300 cta-button">Get Your Free Offer</a>
+            </nav>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-20 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-header font-bold leading-tight fade-in-up">Unlock the Value in Your Real Estate Note.</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in-up" style="transition-delay: 200ms;">We provide fast, fair, and confidential liquidity for your mortgage notes. Turn your future payments into cash today.</p>
+            <div class="mt-8 fade-in-up" style="transition-delay: 400ms;">
+                <a href="#get-offer" class="bg-brand-green text-white text-lg font-bold px-10 py-4 rounded-md hover-bg-brand-green-dark transition duration-300 cta-button">Get a No-Obligation Offer Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Simple 3-Step Process -->
+    <section id="process" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-header font-bold text-gray-800 fade-in-up">Our Simple 3-Step Process</h2>
+                <p class="mt-2 text-gray-500 max-w-2xl mx-auto fade-in-up" style="transition-delay: 150ms;">We've streamlined note selling to be fast, transparent, and hassle-free.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="fade-in-up" style="transition-delay: 300ms;">
+                    <div class="p-8 border-2 border-gray-200 rounded-lg step-card h-full">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-green text-white mx-auto mb-6 text-2xl font-bold">1</div>
+                        <h3 class="text-2xl font-header font-semibold mb-2">Submit Your Note</h3>
+                        <p class="text-gray-600">Provide some basic information about your real estate note through our secure online form. It's quick, easy, and completely confidential.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="fade-in-up" style="transition-delay: 450ms;">
+                    <div class="p-8 border-2 border-gray-200 rounded-lg step-card h-full">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-green text-white mx-auto mb-6 text-2xl font-bold">2</div>
+                        <h3 class="text-2xl font-header font-semibold mb-2">Receive Our Offer</h3>
+                        <p class="text-gray-600">Our experienced team will review your note details and provide you with a fair, competitive, no-obligation cash offer, often within 24-48 hours.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="fade-in-up" style="transition-delay: 600ms;">
+                    <div class="p-8 border-2 border-gray-200 rounded-lg step-card h-full">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-green text-white mx-auto mb-6 text-2xl font-bold">3</div>
+                        <h3 class="text-2xl font-header font-semibold mb-2">Close & Get Funded</h3>
+                        <p class="text-gray-600">Once you accept our offer, we handle all the paperwork and closing costs. You receive your cash lump sum quickly and efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 fade-in-up">
+                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2069&auto=format&fit=crop" alt="Professional Team" class="rounded-lg shadow-xl">
+            </div>
+            <div class="md:w-1/2 fade-in-up" style="transition-delay: 200ms;">
+                <h2 class="text-4xl font-header font-bold text-gray-800">Your Trusted Partner in Note Liquidation</h2>
+                <p class="mt-4 text-gray-600">In an industry built on trust, we stand apart with our commitment to integrity and client success. We're not just buying notes; we're providing financial solutions.</p>
+                <ul class="mt-6 space-y-4">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-gray-700"><strong>Speed and Efficiency:</strong> We've perfected our process to close faster than the industry average.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path></svg>
+                        <span class="text-gray-700"><strong>Top Dollar Offers:</strong> Our extensive network and market expertise allow us to provide highly competitive pricing for your notes.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-gray-700"><strong>Absolute Transparency:</strong> No hidden fees. No surprises. We cover all typical closing costs and our process is clear from start to finish.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-header font-bold text-center text-gray-800 mb-12 fade-in-up">What Our Clients Are Saying</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-lg border border-gray-200 fade-in-up" style="transition-delay: 200ms;">
+                    <p class="text-gray-600 mb-6">"The team at WeCloseNotes.com was incredibly professional and fast. They gave me a great offer and handled everything. I had cash in my account much faster than I expected."</p>
+                    <div class="font-bold text-gray-800">- Sarah J.</div>
+                    <div class="text-sm text-gray-500">Note Seller, Florida</div>
+                </div>
+                <div class="testimonial-card p-8 rounded-lg border border-gray-200 fade-in-up" style="transition-delay: 350ms;">
+                    <p class="text-gray-600 mb-6">"I was hesitant about selling my note, but Bill and his team made the process so transparent and easy. They answered all my questions and gave me a very fair price. Highly recommend."</p>
+                    <div class="font-bold text-gray-800">- Michael R.</div>
+                    <div class="text-sm text-gray-500">Private Lender, Texas</div>
+                </div>
+                <div class="testimonial-card p-8 rounded-lg border border-gray-200 fade-in-up" style="transition-delay: 500ms;">
+                    <p class="text-gray-600 mb-6">"Simply the best in the business. They understand the market and they treat their clients with respect. If you need to sell a mortgage note, this is the only call you need to make."</p>
+                    <div class="font-bold text-gray-800">- David Chen</div>
+                    <div class="text-sm text-gray-500">Investor, California</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Offer Section -->
+    <section id="get-offer" class="py-20 bg-brand-dark text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-header font-bold fade-in-up">Get Your Free, No-Obligation Quote Today</h2>
+                <p class="mt-2 text-gray-300 max-w-2xl mx-auto fade-in-up" style="transition-delay: 150ms;">Find out what your note is worth. Fill out the form below to get started.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-lg p-8 shadow-2xl fade-in-up" style="transition-delay: 300ms;">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-brand-green">
+                        <input type="text" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-brand-green">
+                        <input type="email" placeholder="Email Address" class="md:col-span-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-brand-green">
+                        <input type="tel" placeholder="Phone Number" class="md:col-span-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-brand-green">
+                        <textarea placeholder="Tell us a little about your note (optional)" rows="4" class="md:col-span-2 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-brand-green"></textarea>
+                    </div>
+                    <button type="submit" class="w-full mt-6 bg-brand-green text-white text-lg font-bold p-3 rounded-md hover-bg-brand-green-dark transition duration-300 cta-button">Submit for a Free Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-gray-700 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 WeCloseNotes.com. All Rights Reserved.</p>
+            <p class="text-sm mt-1">A conceptual design to showcase a modern digital presence.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+</html>
+

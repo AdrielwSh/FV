@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deborah D. Niskey | Top 1% Realtor | Executive Sales Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #0A4DA2;
+            --color-primary-dark: #08367A;
+            --color-secondary: #C89B3C;
+            --color-dark: #1A1A1A;
+            --color-light: #F8F8F8;
+            --color-gray: #767676;
+            --color-light-gray: #E5E5E5;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --transition: all 0.3s ease;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --radius: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-dark);
+            line-height: 1.6;
+            background-color: var(--color-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .logo span {
+            color: var(--color-secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Featured Listings */
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-primary);
+            margin: 1rem auto;
+        }
+
+        .listings {
+            padding: 4rem 0;
+        }
+
+        .listing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .listing-card {
+            background-color: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .listing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .listing-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .listing-content {
+            padding: 1.5rem;
+        }
+
+        .listing-price {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .listing-address {
+            color: var(--color-gray);
+            margin-bottom: 1rem;
+        }
+
+        .listing-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            border-top: 1px solid var(--color-light-gray);
+            padding-top: 1rem;
+        }
+
+        .listing-detail {
+            display: flex;
+            align-items: center;
+        }
+
+        .listing-detail i {
+            margin-right: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        /* AI Advantage */
+        .ai-advantage {
+            background-color: white;
+            padding: 4rem 0;
+        }
+
+        .ai-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .ai-content h2 {
+            color: var(--color-primary);
+        }
+
+        .benefit {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-icon {
+            background-color: var(--color-primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-visual {
+            text-align: center;
+        }
+
+        .ai-visual i {
+            font-size: 8rem;
+            color: var(--color-primary);
+        }
+
+        /* Neighborhoods */
+        .neighborhoods {
+            padding: 4rem 0;
+            background-color: var(--color-light);
+        }
+
+        .neighborhood-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .neighborhood-card {
+            background-color: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .neighborhood-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .neighborhood-content {
+            padding: 1.5rem;
+        }
+
+        .neighborhood-content h3 {
+            color: var(--color-primary);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .testimonial-text:before,
+        .testimonial-text:after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--color-primary);
+            opacity: 0.2;
+            position: absolute;
+        }
+
+        .testimonial-text:before {
+            top: -1rem;
+            left: -1.5rem;
+        }
+
+        .testimonial-text:after {
+            bottom: -2rem;
+            right: -1.5rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 6rem 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-contact h3,
+        .footer-links h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            margin-right: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--color-primary);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Chatbot */
+        .chatbot {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .chat-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .chat-icon:hover {
+            background-color: var(--color-primary-dark);
+            transform: scale(1.05);
+        }
+
+        .chat-icon i {
+            font-size: 1.5rem;
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 350px;
+            height: 450px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .bot-message {
+            background-color: #f1f1f1;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background-color: var(--color-primary);
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid var(--color-light-gray);
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-right: 0.5rem;
+        }
+
+        .chat-input button {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .ai-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chat-window {
+                width: 300px;
+                right: -20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Deborah<span>Niskey</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#listings">Listings</a></li>
+                    <li><a href="#neighborhoods">Neighborhoods</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Never Miss a Lead Again, Deborah.</h1>
+                <p>While you're closing deals, your 24/7 AI Assistant is capturing and qualifying your next client in Bethany Beach and beyond.</p>
+                <a href="#listings" class="btn">See My Featured Listings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Listings -->
+    <section id="listings" class="listings">
+        <div class="container">
+            <h2 class="section-title">My Featured Properties</h2>
+            <div class="listing-grid">
+                <div class="listing-card">
+                    <div class="listing-img" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="listing-content">
+                        <div class="listing-price">$749,000</div>
+                        <div class="listing-address">124 Coastal Highway, Bethany Beach, DE</div>
+                        <div class="listing-details">
+                            <div class="listing-detail"><i class="fas fa-bed"></i> 4 Beds</div>
+                            <div class="listing-detail"><i class="fas fa-bath"></i> 3 Baths</div>
+                            <div class="listing-detail"><i class="fas fa-ruler-combined"></i> 2,800 Sq Ft</div>
+                        </div>
+                        <p>Stunning beachfront property with panoramic ocean views, recently renovated with high-end finishes throughout.</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="listing-card">
+                    <div class="listing-img" style="background-image: url('https://images.unsplash.com/photo-1600566753052-d7f3e6c2b83e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="listing-content">
+                        <div class="listing-price">$1,150,000</div>
+                        <div class="listing-address">8 Sandpiper Lane, Fenwick Island, DE</div>
+                        <div class="listing-details">
+                            <div class="listing-detail"><i class="fas fa-bed"></i> 5 Beds</div>
+                            <div class="listing-detail"><i class="fas fa-bath"></i> 4.5 Baths</div>
+                            <div class="listing-detail"><i class="fas fa-ruler-combined"></i> 3,500 Sq Ft</div>
+                        </div>
+                        <p>Luxury coastal living at its finest. This exquisite property features a private pool, gourmet kitchen, and direct beach access.</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="listing-card">
+                    <div class="listing-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="listing-content">
+                        <div class="listing-price">$549,000</div>
+                        <div class="listing-address">36 Bayview Drive, Ocean View, DE</div>
+                        <div class="listing-details">
+                            <div class="listing-detail"><i class="fas fa-bed"></i> 3 Beds</div>
+                            <div class="listing-detail"><i class="fas fa-bath"></i> 2 Baths</div>
+                            <div class="listing-detail"><i class="fas fa-ruler-combined"></i> 1,900 Sq Ft</div>
+                        </div>
+                        <p>Charming waterfront cottage with private dock, perfect for boating enthusiasts. Recently updated with new kitchen and baths.</p>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Advantage -->
+    <section class="ai-advantage">
+        <div class="container">
+            <h2 class="section-title">Be in Two Places at Once</h2>
+            <div class="ai-container">
+                <div class="ai-content">
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>24/7 Instant Response</h3>
+                            <p>Instantly engage every website visitor, day or night. Responding in the first minute increases conversions by over 300%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Automatic Lead Qualification</h3>
+                            <p>Your AI assistant asks the crucial questions—pre-approval status, timeline, and more—so you only spend time on serious prospects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Seamless Appointment Scheduling</h3>
+                            <p>Qualified leads can book a call or showing directly in your calendar without any back-and-forth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-visual">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhood Expertise -->
+    <section id="neighborhoods" class="neighborhoods">
+        <div class="container">
+            <h2 class="section-title">Unmatched Expertise in Bethany Beach's Market</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">With decades of experience serving Delaware's beautiful coastal communities, I offer unparalleled knowledge of local market trends, property values, and community amenities.</p>
+            
+            <div class="neighborhood-grid">
+                <div class="neighborhood-card">
+                    <div class="neighborhood-img" style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="neighborhood-content">
+                        <h3>Bethany Beach</h3>
+                        <p>Known as "The Quiet Resort," Bethany Beach offers a peaceful coastal lifestyle with beautiful beaches, a charming boardwalk, and family-friendly atmosphere.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-img" style="background-image: url('https://images.unsplash.com/photo-1510798831974-4c1d4f5be3b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="neighborhood-content">
+                        <h3>Fenwick Island</h3>
+                        <p>Fenwick Island boasts pristine beaches, excellent fishing, and a relaxed atmosphere while being conveniently located near popular restaurants and shopping.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-img" style="background-image: url('https://images.unsplash.com/photo-1435575653480-2c80334c8fcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="neighborhood-content">
+                        <h3>Ocean View</h3>
+                        <p>Ocean View offers a perfect blend of coastal living and small-town charm, with beautiful parks, local shops, and easy access to both beach and bay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What My Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        Working with Deborah was a seamless experience. Her market knowledge and dedication are second to none. We found our dream home in Bethany Beach in just one week!
+                    </div>
+                    <div class="testimonial-author">- The Johnson Family</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>Ready to Elevate Your Business?</h2>
+            <p>This AI-powered website can be yours. Let's talk about how we can start sending qualified leads directly to your phone this week.</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message"></textarea>
+                </div>
+                <div class="form-group full">
+                    <button type="submit" class="btn">Get My Free Consultation</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <h3>Contact Me</h3>
+                    <p><i class="fas fa-phone"></i> (302) 555-1234</p>
+                    <p><i class="fas fa-envelope"></i> deborah@eliterealty.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coastal Highway, Bethany Beach, DE 19930</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#listings">Featured Listings</a></li>
+                        <li><a href="#neighborhoods">Neighborhoods</a></li>
+                        <li><a href="#">Buyers</a></li>
+                        <li><a href="#">Sellers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Deborah D. Niskey | Top 1% Realtor | Executive Sales Specialist
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <div class="chat-icon" id="chatIcon">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <img src="https://deborahdn2.com/wp-content/uploads/2023/12/Deb-headshot-scaled.jpg" alt="Deborah Niskey">
+                <div>
+                    <strong>Deborah's AI Assistant</strong>
+                    <p>Online • Ready to help</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    Hi there! I'm Deborah's AI assistant. Are you looking to buy or sell a property in the Bethany Beach area?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chatbot functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatIcon = document.getElementById('chatIcon');
+            const chatWindow = document.getElementById('chatWindow');
+            const chatMessages = document.getElementById('chatMessages');
+            const userInput = document.getElementById('userInput');
+            const sendMessage = document.getElementById('sendMessage');
+            
+            let chatState = 0;
+            let userData = {};
+            
+            // Open chat window
+            chatIcon.addEventListener('click', function() {
+                chatWindow.style.display = 'flex';
+            });
+            
+            // Send message function
+            function sendUserMessage() {
+                const message = userInput.value.trim();
+                if (message === '') return;
+                
+                // Add user message to chat
+                addMessage(message, 'user');
+                userInput.value = '';
+                
+                // Process message based on chat state
+                processChat(message);
+            }
+            
+            // Send message on button click
+            sendMessage.addEventListener('click', sendUserMessage);
+            
+            // Send message on enter key
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendUserMessage();
+                }
+            });
+            
+            // Add message to chat
+            function addMessage(text, type) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message');
+                messageDiv.classList.add(type === 'user' ? 'user-message' : 'bot-message');
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // Process chat based on state
+            function processChat(message) {
+                switch(chatState) {
+                    case 0: // Initial question - buy/sell
+                        if (message.toLowerCase().includes('buy') || message.toLowerCase().includes('purchas')) {
+                            userData.type = 'buyer';
+                            addMessage('Great! Are you already working with another agent?', 'bot');
+                            chatState = 1;
+                        } else if (message.toLowerCase().includes('sell') || message.toLowerCase().includes('list')) {
+                            userData.type = 'seller';
+                            addMessage('Excellent! Are you already working with another agent?', 'bot');
+                            chatState = 1;
+                        } else {
+                            addMessage("I'm not sure I understand. Are you looking to buy or sell a property?", 'bot');
+                        }
+                        break;
+                    
+                    case 1: // Working with another agent
+                        if (message.toLowerCase().includes('yes') || message.toLowerCase().includes('yeah') || message.toLowerCase().includes('already')) {
+                            addMessage("I appreciate your honesty! If things don't work out with your current agent, remember that Deborah has helped hundreds of clients find their dream homes. What's your timeline for making a move?", 'bot');
+                            chatState = 3;
+                        } else if (message.toLowerCase().includes('no') || message.toLowerCase().includes('not') || message.toLowerCase().includes("don't")) {
+                            addMessage("Perfect! Deborah would be thrilled to assist you. What's your timeline for buying or selling? (e.g., within 3 months, 3-6 months, just browsing)", 'bot');
+                            chatState = 2;
+                        } else {
+                            addMessage("I'm not sure I understand. Are you already working with another real estate agent?", 'bot');
+                        }
+                        break;
+                    
+                    case 2: // Timeline for serious prospects
+                        userData.timeline = message;
+                        if (message.toLowerCase().includes('3 month') || message.toLowerCase().includes('soon') || message.toLowerCase().includes('immediate') || message.toLowerCase().includes('now')) {
+                            addMessage("That's great! Deborah specializes in clients who are ready to make moves quickly. What is the best phone number to reach you at for a brief, no-obligation call?", 'bot');
+                            chatState = 4;
+                        } else {
+                            addMessage("Thanks for that information! It's never too early to start planning. Would you like to schedule a consultation with Deborah to discuss your plans?", 'bot');
+                            chatState = 5;
+                        }
+                        break;
+                    
+                    case 3: // Timeline for those working with other agents
+                        userData.timeline = message;
+                        addMessage("Thank you for sharing that. Would you like me to send you some information about Deborah's approach and success stories? If so, what's your email address?", 'bot');
+                        chatState = 6;
+                        break;
+                    
+                    case 4: // Get phone number for serious buyers
+                        userData.phone = message;
+                        addMessage(`Thank you! Deborah will call you at ${message} within the next business day. Is there anything specific you'd like her to know before calling?`, 'bot');
+                        chatState = 7;
+                        break;
+                    
+                    case 5: // Schedule consultation
+                        if (message.toLowerCase().includes('yes') || message.toLowerCase().includes('sure') || message.toLowerCase().includes('ok')) {
+                            addMessage("Excellent! What is the best phone number for Deborah to reach you?", 'bot');
+                            chatState = 4;
+                        } else {
+                            addMessage("No problem! Would you like to join Deborah's monthly market update newsletter to stay informed about the Bethany Beach real estate market? If so, what's your email address?", 'bot');
+                            chatState = 6;
+                        }
+                        break;
+                    
+                    case 6: // Get email address
+                        userData.email = message;
+                        addMessage(`Thank you! You've been added to our newsletter. We'll send valuable market insights to ${message}. Is there anything else I can help you with?`, 'bot');
+                        chatState = 8;
+                        break;
+                    
+                    case 7: // Additional info
+                        userData.additional = message;
+                        addMessage("Noted! Deborah will review this information before calling. Thank you for your time today!", 'bot');
+                        chatState = 8;
+                        break;
+                    
+                    case 8: // End conversation
+                        addMessage("Thank you for chatting with me! Feel free to reach out if you have any other questions.", 'bot');
+                        break;
+                }
+            }
+            
+            // Auto-open chatbot after 10 seconds
+            setTimeout(function() {
+                chatWindow.style.display = 'flex';
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
